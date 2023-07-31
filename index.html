@@ -16,6 +16,35 @@
     .font-manrope {
       font-family: 'Manrope', sans-serif;
     }
+
+    .img {
+      transform: rotateY(45deg);
+      animation: rotateAnimation 2s linear infinite;
+    }
+    .feature-img{
+      transform: scale(1);
+      animation: scaling 2s linear infinite ;
+    }
+    @keyframes scaling {
+            from {
+                transform: scale(0.3);
+            }
+
+            to {
+                transform: scale(1);
+
+            }
+        }
+
+    @keyframes rotateAnimation {
+      from {
+        transform: rotateY(45deg);
+      }
+
+      to {
+        transform: rotateY(225deg);
+      }
+    }
   </style>
   <script>
     tailwind.config = {
@@ -34,9 +63,9 @@
 </head>
 
 <body class="font-manrope">
-  <header class="container lg:mx-auto lg:pl-20 lg:pr-20">
+  <header class="lg:mx-auto lg:pl-20 lg:pr-20">
     <!-- Banner section -->
-    <div class=" my-10 lg:my-32 px-10">
+    <div class="my-10 lg:my-32 px-10">
       <div class="flex gap-10 lg:gap-10 text-centerlg:text-left  flex-col justify-center items-center lg:flex-row">
         <div>
           <h1 class="text-7xl font-extrabold text-primary-color lg:w-3/4">It's good
@@ -71,14 +100,15 @@
     <section class="container mb-10 lg:mx-auto md:mx-auto">
       <div class="text-center">
         <h2 class="text-3xl lg:text-5xl md:font-4xl font-extrabold">Our Featured Products</h2>
-        <p class="py-10 text-base font-extrabold text-secondary-color lg:max-w-3xl md:max-w-3xl mx-auto px-10">There are many
+        <p class="py-10 text-base font-extrabold text-secondary-color lg:max-w-3xl md:max-w-3xl mx-auto px-10">There are
+          many
           variations of
           passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
           or randomised words which don't look even slightly believable. </p>
         <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 px-5">
           <div class="card bg-gradient-to-b from-[#F4F4F4] to-[#f4f4f400] shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/tea-1.png" alt="Tea" class="rounded-xl" />
+              <img src="./images/tea-1.png" alt="Tea" class="rounded-xl feature-img" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Milk Tea</h2>
@@ -87,7 +117,7 @@
           </div>
           <div class="card bg-gradient-to-b from-[#F4F4F4] to-[#f4f4f400] shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/tea-2.png" alt="Tea" class="rounded-xl" />
+              <img src="./images/tea-2.png" alt="Tea" class="rounded-xl feature-img" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Black Tea</h2>
@@ -96,7 +126,7 @@
           </div>
           <div class="card bg-gradient-to-b from-[#F4F4F4] to-[#f4f4f400] shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/tea-3.png" alt="Tea" class="rounded-xl" />
+              <img src="./images/tea-3.png" alt="Tea" class="rounded-xl feature-img" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Lemon Tea</h2>
@@ -105,7 +135,7 @@
           </div>
           <div class="card bg-gradient-to-b from-[#F4F4F4] to-[#f4f4f400] shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="./images/tea-4.png" alt="Tea" class="rounded-xl" />
+              <img src="./images/tea-4.png" alt="Tea" class="rounded-xl feature-img" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Green Tea</h2>
@@ -120,11 +150,11 @@
         <div class="grid lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <div class="rounded-xl h-36 bg-gradient-to-r from-red-100 to-amber-100"></div>
           <div class="rounded-xl row-span-2 bg-[#E6A6231A]">
-            <img src="./images/fresh-1.png" alt="" class="px-8 py-12">
+            <img src="./images/fresh-1.png" alt="" class="px-8 py-12 img">
           </div>
 
           <div class="rounded-xl row-span-2 bg-[#5776391a]">
-            <img src="./images/fresh-2.png" alt="" class=" px-8 py-12">
+            <img src="./images/fresh-2.png" alt="" class=" px-8 py-12 img">
           </div>
           <div class="rounded-xl h-36 bg-gradient-to-r from-[#F4F4F4] to-[#f4f4f400]"></div>
         </div>
@@ -239,7 +269,8 @@
     <!-- Footer section -->
     <section class="">
       <div class="bg-gradient-to-r from-red-100 to-amber-100 lg:mt-28">
-        <div class="flex flex-col px-4 pt-4 justify-center items-center mt-10 lg:flex-row lg:justify-between md:justify-center md:gap-8 md:px-4 lg:px-28 lg:pt-16">
+        <div
+          class="flex flex-col px-4 pt-4 justify-center items-center mt-10 lg:flex-row lg:justify-between md:justify-center md:gap-8 md:px-4 lg:px-28 lg:pt-16">
           <div>
             <img src="./images/cup.png" alt="">
           </div>
